@@ -24,7 +24,7 @@ public class RestaurantUseCase implements IRestaurantServicePort {
         if (!restaurant.isValidName()){
             throw new InvalidRestaurantNameException("Nombre de restaurante invalido, no puede ser unicamente numerico");
         }
-        if (restaurantPersistencePort.existByNit(restaurant.getNit())) {
+        if (restaurantPersistencePort.existsByNit(restaurant.getNit())) {
             throw new NitDuplicateException("Ya existe un restaurante registrado con este NIT");
         }
         User owner = userClientPort.getUserById(restaurant.getIdOwner());

@@ -5,7 +5,11 @@ import com.pragma.challenge.pra_cha_ms_plazoleta.pra_cha_ms_plazoleta.domain.api
 import com.pragma.challenge.pra_cha_ms_plazoleta.pra_cha_ms_plazoleta.domain.model.Restaurant;
 import com.pragma.challenge.pra_cha_ms_plazoleta.pra_cha_ms_plazoleta.infrastructure.input.rest.dto.request.RestaurantRequestDto;
 import com.pragma.challenge.pra_cha_ms_plazoleta.pra_cha_ms_plazoleta.infrastructure.input.rest.mapper.IRestaurantDtoMapper;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
+@Transactional
 public class RestaurantHandler implements IRestaurantHandler {
 
     private final IRestaurantServicePort restaurantServicePort;

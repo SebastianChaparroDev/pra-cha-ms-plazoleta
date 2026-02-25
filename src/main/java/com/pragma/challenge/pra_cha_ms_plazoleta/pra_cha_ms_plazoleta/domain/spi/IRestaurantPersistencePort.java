@@ -5,5 +5,5 @@ import com.pragma.challenge.pra_cha_ms_plazoleta.pra_cha_ms_plazoleta.domain.mod
 public interface IRestaurantPersistencePort {
 
     void saveRestaurant(Restaurant restaurant);
-    boolean existByNit(String nit);
+    boolean existsByNit(String nit);
 }
